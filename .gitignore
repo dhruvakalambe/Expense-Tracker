@@ -4,6 +4,9 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+# Do not track secrets
+/src/main/resources/gemini-service-account.json
+
 ### STS ###
 .apt_generated
 .classpath
