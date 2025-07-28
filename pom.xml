@@ -40,26 +40,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.google.genai</groupId>
-			<artifactId>google-genai</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-
-		<!-- Gemini SDK -->
-		<dependency>
-			<groupId>com.google.ai.client.generativeai</groupId>
-			<artifactId>generativeai</artifactId>
-			<version>0.1.0</version>
-		</dependency>
-
-		<!-- Google Auth (for .json key support) -->
-		<dependency>
-			<groupId>com.google.auth</groupId>
-			<artifactId>google-auth-library-oauth2-http</artifactId>
-			<version>1.22.0</version>
-		</dependency>
-
-		<dependency>
 			<groupId>com.mysql</groupId>
 			<artifactId>mysql-connector-j</artifactId>
 			<scope>runtime</scope>
@@ -73,6 +53,17 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-controls</artifactId>
+			<version>21.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-fxml</artifactId>
+			<version>21.0.1</version>
 		</dependency>
 	</dependencies>
 
@@ -93,6 +84,7 @@
 						<path>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>
+							<version>1.18.30</version>
 						</path>
 					</annotationProcessorPaths>
 				</configuration>
@@ -107,6 +99,14 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.openjfx</groupId>
+				<artifactId>javafx-maven-plugin</artifactId>
+				<version>0.0.8</version>
+				<configuration>
+					<mainClass>com.homeexpense.frontend.Main</mainClass>
 				</configuration>
 			</plugin>
 		</plugins>

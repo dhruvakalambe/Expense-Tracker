@@ -6,13 +6,14 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/ai")
+@CrossOrigin
 public class AIController {
 
     @Autowired
     private GeminiService geminiService;
 
     @PostMapping("/ask")
-    public String ask(@RequestBody String message) {
-        return geminiService.askGemini(message);
+    public String askGemini(@RequestBody String prompt) {
+        return geminiService.askGemini(prompt);
     }
 }
